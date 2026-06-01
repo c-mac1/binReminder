@@ -87,17 +87,6 @@ This creates the AWS resources CDK needs to deploy (S3 bucket for assets, IAM ro
 ### 6. Deploy
 
 ```bash
-# Load your .env into the shell (Mac/Linux)
-export $(cat .env | xargs)
-
-# Load your .env into the shell (Windows PowerShell)
-Get-Content .env | ForEach-Object {
-  if ($_ -match '^([^#][^=]*)=(.*)$') {
-    [System.Environment]::SetEnvironmentVariable($Matches[1].Trim(), $Matches[2].Trim())
-  }
-}
-
-# Deploy
 cdk deploy
 ```
 
